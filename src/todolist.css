@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #9a7d7d;
+    padding: 24px;
+    border-radius: 10px;
+}
+
+.inputBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.inputStyle{
+    width: 50%;
+}
+.eachItem{
+    display: flex;
+    z-index: 1;
+    background-color: black;
+    color: white;
+}
+

@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { createContext } from "react";
+import ComA from "./ComA";
+import Todolist from "./TodoList";
+// import React, {Suspense, lazy} from "react";
+// import Home from "./Home";
+// const Home = lazy(()=>import("./Home"))
+const firstName = createContext();
+const lastName = createContext();
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:"flex", alignItems:"center", justifyContent:"center", height:"100vh"}}>
+      {/* --Lazy Loading-- */}
+
+      {/* <div>H1</div>
+      <Suspense fallback={<div>please wait....</div>}>
+      <Home />
+      </Suspense> */}
+
+      {/* --context API-- */}
+      {/* <firstName.Provider value={"Saurav"}>
+        <lastName.Provider value={"kumar"}>
+          <ComA></ComA>
+        </lastName.Provider>
+      </firstName.Provider> */}
+
+      {/* useContext hook */}
+      
+
+      {/* todoApp */}
+      <Todolist/>
     </div>
   );
 }
 
 export default App;
+export { firstName, lastName };
